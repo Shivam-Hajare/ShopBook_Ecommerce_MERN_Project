@@ -1,0 +1,23 @@
+.NavBar{
+    display: flex; 
+    justify-content: space-between;
+    margin: 20px;
+}
+.NavBar img{
+    width: 90px;
+}
+.nav_items ul{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.nav_items a{
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: blue;
+}
+.nav_items a ul {
+    padding: 10px;
+}

@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import NavBar from "./components/NavBar/NavBar"
+import Footer from './components/Footer/Footer';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import useInternetCheck from './components/utility/useInternetCheck';
 function App() {
+  const isOnline=useInternetCheck();
+  if(!isOnline)
+  {
+    return  <div className='container'>
+    <p>Turn on/off your Wi-Fi to see what happens</p>
+    {isOnline ? (
+      <h1 className='online'>You Are Online</h1>
+    ) : (
+      <h1 className='offline'>You Are Offline</h1>
+    )}
+  </div>
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar/>
+      <Outlet/>
+      <Footer/> 
+    </>
   );
 }
 

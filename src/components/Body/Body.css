@@ -1,0 +1,10 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.cardContainer a{
+    text-decoration: none;
+    color: black;
+}

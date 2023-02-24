@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.online {
+  color: blue;
+}
+
+.offline {
+  color: red;
+}
