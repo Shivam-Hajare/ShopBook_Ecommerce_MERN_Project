@@ -5,7 +5,7 @@
    justify-content: center;
 }
 .pro_details{
-    margin: 0% 8% 2% 8%;
+    margin: 2% 8% 2% 8%;
     padding: 1% 5%;
     border: 1px solid gray;
 }
@@ -181,3 +181,15 @@ input#img-6:checked ~ .carousel-dots label#img-dot-6 {
 
 
 input:checked + .slide-container .nav label { display: block; }
+.stock{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.label {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}  

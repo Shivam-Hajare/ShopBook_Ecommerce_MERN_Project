@@ -1,0 +1,23 @@
+
+
+.orderTitle {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 50px;
+    color: #333;
+}
+.orderhisTable {
+    margin: 50px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    width: 90%;
+}
+.orderhisTable th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+.orderhisTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

@@ -1,4 +1,5 @@
 import { useEffect,useState } from 'react'
+import axios from 'axios';
 const useProductData = () => {
     const [product,setProduct] = useState([]);
     
@@ -7,9 +8,9 @@ const useProductData = () => {
   },[])
   async function getProducts(){
     try{
-      const ApiData = await fetch('https://dummyjson.com/products');
-      const json=await ApiData.json();
-      setProduct(json.products);
+      const ApiData = await axios.get('/api/products');
+     // console.log(ApiData.data);
+      setProduct(ApiData.data);
     }catch(error)
     {
       console.log(error);

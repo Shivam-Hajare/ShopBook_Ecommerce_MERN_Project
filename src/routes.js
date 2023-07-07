@@ -3,9 +3,14 @@ import ErrorComponent from "./components/ErrorComponent/ErrorComponent";
 import ReactDOM from 'react-dom/client';
 import App from "./App";
 import Body from "./components/Body/Body";
-import About from "./components/About/About.jsx"
-import Contact from "./components/Contact/Contact.jsx"
 import Product_Details from "./components/Product_Details/Product_Details.jsx";
+import Cart from "./components/Cart/Cart.jsx";
+import SignIn from "./components/SignIn/SignIn";
+import SignUp from "./components/SignUp/SignUp";
+import Shipping from "./components/Shipping/Shipping.jsx";
+import PlaceOrder from "./components/PlaceOrder/PlaceOrder";
+import OrderDetails from "./components/OrderDetails/OrderDetails";
+import OrderHistory from "./components/OrderHistory/OrderHistory";
 const appRouter = createBrowserRouter([
     {
         path: "/",
@@ -18,16 +23,36 @@ const appRouter = createBrowserRouter([
                
             },
             {
-                path: "/about",
-                element: <About />
+                path: "/signIn",
+                element: <SignIn />
             },
             {
-                path: "/contact",
-                element: <Contact />
+                path: "/signUp",
+                element: <SignUp />
+            },
+            {
+                path: "/cart",
+                element: <Cart />
             },
             {
                 path: "/product_details/:id",
                 element: <Product_Details />
+            },
+            {
+                path: "/shipping",
+                element: <Shipping />
+            },
+            {
+                path: "/placeOrder",
+                element: <PlaceOrder />
+            },
+            {
+                path: "/orderdetails",
+                element: <OrderDetails />
+            },
+            {
+                path: "/orderhistory",
+                element: <OrderHistory />
             }
         ]
     },
